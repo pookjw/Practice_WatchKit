@@ -67,19 +67,22 @@
         // 5. append the new note to our array
         [self.notes addObject:result];
         
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.notes requiringSecureCoding:NO error:nil];
-        [data writeToFile:self.savePath.absoluteString atomically:YES];
+        NSError *erorr = nil;
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.notes requiringSecureCoding:NO error:&erorr];
+        NSLog(@"%@", erorr.localizedDescription);
+        [data writeToURL:self.savePath options:0 error:&erorr];
+        NSLog(@"%@", erorr.localizedDescription);
     }];
 }
 
 - (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
-    return @{@"index": [NSString stringWithFormat:@"%lu", rowIndex + 1],
+    return @{@"index": [NSString stringWithFormat:@"%d", rowIndex + 1],
              @"note": self.notes[rowIndex]};
 }
 
 + (NSURL *)getDocumentsDirectory {
     NSArray<NSURL *> *paths = [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-    return paths[0];
+    return [paths[0] URLByAppendingPathComponent:@"notes"];
 }
 
 @end
