@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" pagingScroll="YES" id="Qf3-L4-pE4">
+                            <items>
+                                <tableRow identifier="Row" id="Q5M-qS-ko2" customClass="NoteSelectRow">
+                                    <group key="rootItem" width="1" alignment="left" id="dDk-lG-Fem">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="aKW-kJ-Xmn"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="aKW-kJ-Xmn" id="EcF-Ry-2ZI"/>
+                                        <segue destination="tU8-Vd-OWf" kind="push" id="hn4-z2-0jm"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Add New Note" id="1kQ-gQ-3Ne">
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addNewNote" destination="AgC-eL-Hgc" id="dzk-kI-gSD"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="Qf3-L4-pE4" id="dBQ-sa-HQC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-120" y="-20"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="kaX-fW-cM2">
+            <objects>
+                <controller id="tU8-Vd-OWf" customClass="DetailInterfaceController">
+                    <items>
+                        <label alignment="right" text="Label" id="pdg-7c-OGP"/>
+                    </items>
+                    <connections>
+                        <outlet property="textLabel" destination="pdg-7c-OGP" id="vxQ-Xu-hU8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="163" y="-20"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
