@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label alignment="center" hidden="YES" text="You win!" id="fC0-i4-PG6">
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
+                        <imageView width="0.5" height="0.5" alignment="center" id="8jh-3l-tm4"/>
+                        <separator alignment="left" id="7k2-ko-UkL"/>
+                        <group width="1" height="0.29999999999999999" alignment="center" id="xBA-6l-8pF">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" id="VFM-aA-kLM">
+                                    <connections>
+                                        <action selector="rockTapped" destination="AgC-eL-Hgc" id="fwG-rf-tTN"/>
+                                    </connections>
+                                </button>
+                                <button width="0.34000000000000002" height="1" alignment="left" id="W9c-yQ-hJx">
+                                    <connections>
+                                        <action selector="paperTapped" destination="AgC-eL-Hgc" id="uPV-fb-dpx"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" id="Oys-zx-sqv">
+                                    <connections>
+                                        <action selector="scissorsTapped" destination="AgC-eL-Hgc" id="cH3-8V-L4t"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="0.90000000000000002" alignment="center" id="760-SC-7gN">
+                            <items>
+                                <label alignment="left" text="1/20" id="qjQ-Zk-grC"/>
+                                <timer alignment="right" id="kev-Uw-3qh">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="answers" destination="xBA-6l-8pF" id="dmd-tN-0AN"/>
+                        <outlet property="levelCounter" destination="qjQ-Zk-grC" id="Ucq-Jp-9ZO"/>
+                        <outlet property="paper" destination="W9c-yQ-hJx" id="tGr-fp-CCr"/>
+                        <outlet property="question" destination="8jh-3l-tm4" id="04V-DE-g5G"/>
+                        <outlet property="result" destination="fC0-i4-PG6" id="FJV-pD-d6j"/>
+                        <outlet property="rock" destination="VFM-aA-kLM" id="TZ7-Qw-nor"/>
+                        <outlet property="scissors" destination="Oys-zx-sqv" id="2zP-Cu-1c0"/>
+                        <outlet property="timer" destination="kev-Uw-3qh" id="7yC-b4-flf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="19" y="-20"/>
+        </scene>
+    </scenes>
+</document>

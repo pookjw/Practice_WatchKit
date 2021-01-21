@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project2_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" hidden="YES" text="You win!" id="Riw-x6-NZT">
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
+                        <imageView width="0.5" height="0.5" alignment="center" id="HMP-pz-TNU"/>
+                        <separator alignment="left" id="HHU-b8-pHa"/>
+                        <group width="1" height="0.33000000000000002" alignment="left" id="kDf-Ov-xat">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" id="ogc-5z-nXS">
+                                    <connections>
+                                        <action selector="rockTapped" destination="AgC-eL-Hgc" id="mMP-Jz-tsN"/>
+                                    </connections>
+                                </button>
+                                <button width="0.34000000000000002" height="1" alignment="left" id="XLE-bS-gb3">
+                                    <connections>
+                                        <action selector="paperTapped" destination="AgC-eL-Hgc" id="46o-xd-8OI"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" id="IVp-eK-5cY">
+                                    <connections>
+                                        <action selector="scissorsTapped" destination="AgC-eL-Hgc" id="cIg-kc-rja"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="0.90000000000000002" alignment="center" id="Nvz-eQ-oNn">
+                            <items>
+                                <label alignment="left" text="1/20" id="jqd-gD-6uz"/>
+                                <timer alignment="right" id="ztc-aZ-1Xa">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="answers" destination="kDf-Ov-xat" id="Id2-BF-qGO"/>
+                        <outlet property="levelCounter" destination="jqd-gD-6uz" id="v7k-ca-35f"/>
+                        <outlet property="paper" destination="XLE-bS-gb3" id="PxE-Tx-g5T"/>
+                        <outlet property="question" destination="HMP-pz-TNU" id="RJJ-1x-3Tf"/>
+                        <outlet property="result" destination="Riw-x6-NZT" id="wdx-OA-WSu"/>
+                        <outlet property="rock" destination="ogc-5z-nXS" id="rq2-AR-XsW"/>
+                        <outlet property="scissors" destination="IVp-eK-5cY" id="cph-0J-gLR"/>
+                        <outlet property="timer" destination="ztc-aZ-1Xa" id="793-uy-dog"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="19" y="-21"/>
+        </scene>
+    </scenes>
+</document>
