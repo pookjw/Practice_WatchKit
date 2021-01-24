@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project5_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.5" alignment="left" id="A9H-jO-jju">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="hRQ-rE-q29">
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <connections>
+                                        <action selector="tlButtonTapped" destination="AgC-eL-Hgc" id="YQU-4c-os6"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="mem-LU-Hnf">
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <connections>
+                                        <action selector="trButtonTapped" destination="AgC-eL-Hgc" id="JNH-hx-ngI"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.5" alignment="left" id="DAB-Df-2AG">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="89E-d0-Mtz">
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <connections>
+                                        <action selector="blButtonTapped" destination="AgC-eL-Hgc" id="OWF-4e-9lJ"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="pvh-Ze-82v">
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <connections>
+                                        <action selector="brButtonTapped" destination="AgC-eL-Hgc" id="2mh-hc-o5F"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="dpG-sI-sky">
+                        <items>
+                            <menuItem title="Restart" icon="resume" id="QgM-l4-avE">
+                                <connections>
+                                    <action selector="startNewGame" destination="AgC-eL-Hgc" id="aeY-Ei-oGg"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="blButton" destination="89E-d0-Mtz" id="chd-g4-NnH"/>
+                        <outlet property="brButton" destination="pvh-Ze-82v" id="xZ4-ZW-52g"/>
+                        <outlet property="tlButton" destination="hRQ-rE-q29" id="T72-PB-3nc"/>
+                        <outlet property="trButton" destination="mem-LU-Hnf" id="cmF-SM-LVM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="19" y="-20"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
