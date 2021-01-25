@@ -29,3 +29,14 @@ UserDefaults, KeychainWrapper
 ![](images/7.png)
 
 ![](images/8.png)
+
+### Chapter 6
+
+![](images/9.png)
+
+### Chapter 7
+
+![](images/10.png)
+
+![](images/11.png)
+
