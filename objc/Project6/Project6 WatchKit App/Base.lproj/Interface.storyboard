@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Dictation" id="iKX-JB-KYC">
+                            <connections>
+                                <action selector="dictateTapped" destination="AgC-eL-Hgc" id="1sF-lL-cUf"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Multi input" id="DQR-Vd-ztB">
+                            <connections>
+                                <action selector="multiInputTapped" destination="AgC-eL-Hgc" id="6qw-eC-Bbm"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Recording" id="xs0-PI-42n">
+                            <connections>
+                                <action selector="recordingTapped" destination="AgC-eL-Hgc" id="EpA-ae-jhI"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="19" y="-20"/>
+        </scene>
+    </scenes>
+</document>
