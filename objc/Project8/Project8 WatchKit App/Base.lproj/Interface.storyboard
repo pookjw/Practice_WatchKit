@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label alignment="center" text="Safe Crack" id="ZEI-WX-DJG">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <slider width="1" alignment="left" value="10" maximum="100" steps="100" id="BYJ-Ly-F7M"/>
+                        <button width="1" alignment="left" title="Next" id="YuX-oh-adv">
+                            <connections>
+                                <action selector="nextTapped" destination="AgC-eL-Hgc" id="myz-1g-3SC"/>
+                            </connections>
+                        </button>
+                        <timer alignment="center" id="g3A-y6-NNc">
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                    </items>
+                    <connections>
+                        <outlet property="nextButton" destination="YuX-oh-adv" id="yzq-iB-VHd"/>
+                        <outlet property="numbersLabel" destination="ZEI-WX-DJG" id="FsN-6x-6Xd"/>
+                        <outlet property="safeValue" destination="BYJ-Ly-F7M" id="Dq1-0a-pSJ"/>
+                        <outlet property="timer" destination="g3A-y6-NNc" id="qin-cy-PYp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="19" y="-20"/>
+        </scene>
+    </scenes>
+</document>

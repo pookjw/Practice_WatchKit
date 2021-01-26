@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project8_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Safe Crack" id="Drf-ul-X6u">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <slider width="1" alignment="left" value="50" maximum="100" steps="100" id="SgI-Qc-6M5"/>
+                        <button width="1" alignment="left" title="Next" id="sNk-Vb-u9E">
+                            <connections>
+                                <action selector="nextTapped" destination="AgC-eL-Hgc" id="bvp-cV-2Eb"/>
+                            </connections>
+                        </button>
+                        <timer alignment="center" id="Oe8-UJ-Q8L">
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                    </items>
+                    <connections>
+                        <outlet property="nextButton" destination="sNk-Vb-u9E" id="96S-KI-v7x"/>
+                        <outlet property="numbersLabel" destination="Drf-ul-X6u" id="IBl-Dg-UFh"/>
+                        <outlet property="safeValue" destination="SgI-Qc-6M5" id="KSX-Fa-qep"/>
+                        <outlet property="timer" destination="Oe8-UJ-Q8L" id="d58-yo-hcL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="19" y="-20"/>
+        </scene>
+    </scenes>
+</document>
