@@ -47,8 +47,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        let startDate = Date().addingTimeInterval(86400)
-        handler(startDate)
+        let endDate = Date().addingTimeInterval(86400)
+        handler(endDate)
     }
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
@@ -72,7 +72,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         // 2: Create as many entries as requested
         for i in 0 ..< limit {
-            // 3: Calculaate the date for this result
+            print(limit)
+            // 3: Calculate the date for this result
             let predictionDate = date.addingTimeInterval(Double(60 * 5 * i))
             
             // 4: Fetch a completed template for this date
@@ -143,11 +144,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let template: CLKComplicationTemplateModularSmallSimpleText
             
             if positiveAnswers.contains(prediction) {
-                template = .init(textProvider: CLKSimpleTextProvider(text: "1"))
+                template = .init(textProvider: CLKSimpleTextProvider(text: "😀"))
             } else if uncertainAnswers.contains(prediction) {
-                template = .init(textProvider: CLKSimpleTextProvider(text: "2"))
+                template = .init(textProvider: CLKSimpleTextProvider(text: "🤔"))
             } else {
-                template = .init(textProvider: CLKSimpleTextProvider(text: "3"))
+                template = .init(textProvider: CLKSimpleTextProvider(text: "😧"))
             }
             
             return template
