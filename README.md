@@ -59,3 +59,11 @@ UserDefaults, KeychainWrapper
 ![](images/17.png)
 
 ![](images/18.png)
+
+### Chapter 11
+
+![](images/19.png)
+
+![](images/20.png)
+
+![](images/21.png)
